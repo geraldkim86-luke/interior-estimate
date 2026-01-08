@@ -49,7 +49,7 @@ def main():
     dm = DataManager()
 
     # 타이틀
-    st.title("🏗️ 맞춤 인테리어 견적 시스템")
+    st.title(" 맞춤 인테리어 견적 시스템")
     st.markdown("시공 항목별로 원하시는 자재를 선택해주세요.")
     st.divider()
 
@@ -58,7 +58,7 @@ def main():
     with col1:
         pyeong = st.number_input("아파트 평수 (평)", min_value=10, max_value=100, value=32)
 
-    st.subheader("🛠️ 시공 및 자재 선택")
+    st.subheader(" 시공 및 자재 선택")
     
     # [2] 동적 메뉴 생성
     categories = dm.get_categories()
@@ -76,7 +76,7 @@ def main():
 
     # [3] 견적 계산 및 출력
     if st.button("견적서 산출하기", type="primary", use_container_width=True):
-        st.subheader("📋 상세 견적서")
+        st.subheader(" 상세 견적서")
         
         total_cost = 0
         estimate_data = []
@@ -117,4 +117,5 @@ def main():
             st.warning("선택된 공정이 없습니다. 자재를 선택해주세요.")
 
 if __name__ == "__main__":
+
     main()
